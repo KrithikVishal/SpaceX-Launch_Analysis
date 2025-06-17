@@ -4,7 +4,7 @@ from google.adk.agents import Agent
 from typing import Dict
 
 # Constants
-VISUAL_CROSSING_API_KEY = "V6VD25NGRVEH7U9X4KR4K9PAW"
+VISUAL_CROSSING_API_KEY = "your_weather_API_here"
 BASE_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline"
 
 def validate_date(date_str: str) -> bool:
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     if "status" in forecast and forecast["status"] == "error":
         print(f"❌ Error: {forecast['message']}")
     else:
-        print(f"🌤️ Weather Forecast for {city} on {date}:")
+        print(f"Weather Forecast for {city} on {date}:")
         print(f"- Min Temp: {forecast['data']['temp_min']}°C")
         print(f"- Max Temp: {forecast['data']['temp_max']}°C")
         print(f"- Wind Speed: {forecast['data']['wind_speed']} km/h")
@@ -199,8 +199,8 @@ if __name__ == "__main__":
 
         assessment = assess_launch_conditions(forecast['data'])
         if assessment['data']['launch_advisable']:
-            print("✅ Weather is suitable for a launch.")
+            print("Weather is suitable for a launch.")
         else:
-            print("🚫 Launch not advised due to:")
+            print("Launch not advised due to:")
             for c in assessment['data']['issues']:
                 print(f" - {c}")
