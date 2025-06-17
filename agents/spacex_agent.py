@@ -4,7 +4,7 @@ from typing import Dict, List, Optional
 
 # SNAPI base URL
 SNAPI_BASE_URL = "https://api.spaceflightnewsapi.net/v4"
-GEMINI_API_KEY = "AIzaSyDyhYPYqnU3y7LnMIvHKBF4J5RPLy17oic"
+GEMINI_API_KEY = "your_Gemini_API_here"
 
 def get_latest_spacex_news(query: str = None) -> Dict:
     """
